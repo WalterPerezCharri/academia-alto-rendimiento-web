@@ -1222,3 +1222,171 @@ body {
   transform: scale(1.07);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
 }
+
+/* ============================================================
+   Rediseño cálido y amigable — benchmark academias Perú 2026
+   ============================================================ */
+:root {
+  --sun: #ffb703;
+  --sun-soft: #ffe9c2;
+  --sun-deep: #e69c00;
+  --coral: #ff6b35;
+  --sky: #3b82f6;
+  --forest: #16324f;
+  --forest-2: #0e2236;
+  --cream: #fff9ec;
+  --line: rgba(22, 50, 79, 0.13);
+  --line-light: rgba(255, 249, 236, 0.24);
+}
+
+/* Topbar: azul cálido en vez de verde oscuro */
+.hw-topbar { background: rgba(14, 34, 54, 0.62); }
+.hw-mobile-panel { background: rgba(14, 34, 54, 0.97); }
+
+/* Hero: amanecer andino — azul cálido con brillos sol y coral */
+.hw-hero {
+  background:
+    radial-gradient(58% 72% at 88% 8%, rgba(255, 183, 3, 0.30), transparent 62%),
+    radial-gradient(46% 58% at 6% 96%, rgba(255, 107, 53, 0.24), transparent 60%),
+    radial-gradient(40% 50% at 70% 90%, rgba(116, 247, 178, 0.10), transparent 60%),
+    linear-gradient(163deg, #1a4066 0%, #123253 52%, #0d2438 100%);
+}
+.hw-hero::before { opacity: 0.22; }
+
+/* Titular: acento sol en vez de menta */
+.hw-hero h1 em { color: var(--sun); }
+
+/* Pill de cupo: sol sólido, alto contraste */
+.hw-hero__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: var(--sun);
+  color: #3d2800;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(255, 183, 3, 0.38);
+}
+
+/* Visual del hero: ilustración con tarjeta flotante */
+.hw-hero__visual { border: none; background: transparent; }
+.hw-hero__img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  border-radius: 34px;
+  display: block;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.hw-hero__chip {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  max-width: 230px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  background: rgba(255, 249, 236, 0.94);
+  color: var(--ink);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+.hw-hero__chip strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--coral);
+  letter-spacing: -0.03em;
+}
+.hw-hero__chip span { display: block; margin-top: 5px; font-size: 0.8rem; line-height: 1.4; }
+
+/* Botón principal: gradiente coral cálido */
+.hw-button--accent {
+  background: linear-gradient(135deg, var(--coral), #ff9046);
+  border-color: transparent;
+  box-shadow: 0 8px 22px rgba(255, 107, 53, 0.35);
+}
+.hw-button--accent:hover {
+  background: linear-gradient(135deg, #f25a28, #ff8a3d);
+  border-color: transparent;
+  box-shadow: 0 12px 28px rgba(255, 107, 53, 0.45);
+}
+
+/* Tarjetas de servicio: sombras suaves y acogedoras */
+.hw-service {
+  box-shadow: 0 2px 12px rgba(22, 50, 79, 0.06);
+  border-color: rgba(22, 50, 79, 0.09);
+}
+.hw-service:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(22, 50, 79, 0.13);
+  border-color: rgba(22, 50, 79, 0.16);
+}
+
+/* Tags de colores por pilar (patrón Trilce/Innova) */
+.hw-tag { background: var(--sun-soft); border-color: transparent; color: #7a4b00; }
+.hw-service:nth-child(2) .hw-tag { background: #e0f5ea; color: #0b6b43; }
+.hw-service:nth-child(3) .hw-tag { background: #e3ecff; color: #1d4fd8; }
+.hw-service:nth-child(4) .hw-tag { background: #ffe9e2; color: #c2410c; }
+.hw-service:nth-child(5) .hw-tag { background: #efe9ff; color: #6d28d9; }
+
+/* Sección oscura y panel de contacto: azul cálido */
+.hw-section--dark { background: linear-gradient(170deg, #1a4066, #0e2236); }
+.hw-contact__panel { background: linear-gradient(150deg, #1a4066, #0f2a44); }
+
+/* Números de estadísticas de colores */
+.hw-stat:nth-child(1) strong { color: var(--coral); }
+.hw-stat:nth-child(2) strong { color: #0d9463; }
+.hw-stat:nth-child(3) strong { color: var(--sky); }
+.hw-stat:nth-child(4) strong { color: var(--sun-deep); }
+
+/* FAQ: acento cálido al abrir */
+.hw-faq details[open] { border-color: rgba(255, 107, 53, 0.4); }
+.hw-faq details[open] summary::after { background: var(--sun); border-color: transparent; color: #3d2800; }
+
+/* Ilustración de padres en Resultados */
+.hw-proof-visual {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 30px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(22, 50, 79, 0.06);
+}
+.hw-proof-visual img { width: 100%; border-radius: 22px; display: block; }
+.hw-proof-visual p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+}
+
+/* WhatsApp flotante: pulso suave para invitar al click */
+.hw-whatsapp-fab::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  animation: hw-fab-pulse 2.4s ease-out infinite;
+}
+@keyframes hw-fab-pulse {
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 980px) {
+  .hw-proof-visual { grid-template-columns: 1fr; }
+  .hw-hero__img { min-height: 280px; }
+}

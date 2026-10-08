@@ -15,6 +15,8 @@ import {
   X,
 } from 'lucide-react'
 import '../App.css'
+import heroEstudiantes from '../assets/hero-estudiantes.png'
+import padresProgreso from '../assets/padres-progreso.png'
 
 const site = {
   name: 'Academia de Alto Rendimiento',
@@ -37,31 +39,31 @@ const navItems = [
 
 const pillars = [
   {
-    title: 'Lectura veloz con comprensión',
+    title: '📖 Lectura veloz con comprensión',
     copy: 'Entrenamiento guiado por voz, repetición y textos cronometrados. La velocidad sube solo si la comprensión se mantiene alta.',
     tags: ['1 hora al día', 'Comprensión ≥80%', 'Registro por sesión'],
     icon: BookOpen,
   },
   {
-    title: 'Agilidad matemática',
+    title: '🫮 Agilidad matemática',
     copy: 'Entrenamiento diario por áreas: aritmética, álgebra, geometría, trigonometría y física, con niveles progresivos, cronómetro y exactitud medida.',
     tags: ['2 horas al día', 'Exactitud ≥90%', 'Niveles progresivos'],
     icon: Calculator,
   },
   {
-    title: 'Inglés gamificado',
+    title: '🌍 Inglés gamificado',
     copy: 'Unidades cortas, rachas diarias, ligas entre aulas y premios mensuales para sostener la práctica fuera del aula.',
     tags: ['30 minutos al día', 'Rachas', 'Panel de maestro'],
     icon: Languages,
   },
   {
-    title: 'Programación y robótica',
+    title: '🤖 Programación y robótica',
     copy: 'Scratch, micro:bit, Python y Arduino según edad, con proyectos por trimestre y portafolio antes de la etapa pre.',
     tags: ['1 hora al día', 'Proyectos', 'Portafolio'],
     icon: Bot,
   },
   {
-    title: 'Ciclo preuniversitario',
+    title: '🎯 Ciclo preuniversitario',
     copy: 'Ciclo pre con clases, resolución guiada, simulacros cronometrados y análisis de errores por tema.',
     tags: ['San Marcos', 'UNI', 'Becas'],
     icon: GraduationCap,
@@ -225,7 +227,7 @@ export default function Home() {
         <div className="hw-hero__inner">
           <div data-reveal>
             <p className="hw-eyebrow">Academia de alto rendimiento académico</p>
-            <p className="hw-hero__badge">Cupo limitado: 15 estudiantes por aula</p>
+            <p className="hw-hero__pill">🔥 Cupo limitado: 15 estudiantes por aula</p>
             <h1>
               <span>Tu hijo</span>
               <span>puede ser</span>
@@ -245,30 +247,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hw-hero__visual" data-reveal aria-label="Panel de progreso académico">
-            <div className="hw-dashboard">
-              <div className="hw-dashboard__top">
-                <span>Panel de progreso</span>
-                <span className="hw-status">Medición activa</span>
-              </div>
-              <div className="hw-metrics">
-                <div className="hw-metric">
-                  <strong>300+</strong>
-                  <span>palabras por minuto como meta de lectura veloz.</span>
-                  <div className="hw-meter"><i style={{ width: '86%' }} /></div>
-                </div>
-                <div className="hw-metric">
-                  <strong>≥90%</strong>
-                  <span>exactitud objetivo antes de subir de nivel.</span>
-                  <div className="hw-meter"><i style={{ width: '92%' }} /></div>
-                </div>
-              </div>
-              <div className="hw-levels">
-                <div className="hw-level"><b>7–9</b><span>Fundamentos</span><em>S1–S4</em></div>
-                <div className="hw-level"><b>10–12</b><span>Consolidación</span><em>A1→A2</em></div>
-                <div className="hw-level"><b>13–15</b><span>Pre-pre</span><em>Python</em></div>
-                <div className="hw-level"><b>15–17</b><span>Preuniversitario</span><em>UNMSM · UNI</em></div>
-              </div>
+          <div className="hw-hero__visual" data-reveal aria-label="Estudiantes de Cerro de Pasco entrenando en la academia">
+            <img className="hw-hero__img" src={heroEstudiantes} alt="Niños de Chaupimarca y Yanacancha entrenando lectura veloz, matemáticas, inglés y tecnología" />
+            <div className="hw-hero__chip">
+              <strong>94%</strong>
+              <span>de exactitud antes de subir de nivel</span>
             </div>
           </div>
         </div>
@@ -286,7 +269,7 @@ export default function Home() {
         <div className="hw-shell">
           <div className="hw-section__head" data-reveal>
             <div>
-              <p className="hw-kicker">Método</p>
+              <p className="hw-kicker">🎯 Método</p>
               <h2 className="hw-title">El maestro enseña. El sistema mide. El estudiante acelera.</h2>
             </div>
             <p className="hw-lead">
@@ -318,7 +301,7 @@ export default function Home() {
       <section id="admision" className="hw-section hw-section--dark">
         <div className="hw-shell hw-split">
           <div className="hw-editorial" data-reveal>
-            <p className="hw-kicker">Admisión</p>
+            <p className="hw-kicker">📝 Admisión</p>
             <div className="hw-editorial__panel">
               <div>
                 <strong>Cada estudiante entra con su nivel medido y sale con su plan.</strong>
@@ -345,7 +328,7 @@ export default function Home() {
         <div className="hw-shell">
           <div className="hw-section__head" data-reveal>
             <div>
-              <p className="hw-kicker">Niveles</p>
+              <p className="hw-kicker">🚀 Niveles</p>
               <h2 className="hw-title">Ruta completa de 7 a 17 años.</h2>
             </div>
             <p className="hw-lead">Precios referenciales del plan maestro; ajustar según estudio local y promociones de lanzamiento.</p>
@@ -375,7 +358,7 @@ export default function Home() {
         <div className="hw-shell">
           <div className="hw-section__head" data-reveal>
             <div>
-              <p className="hw-kicker">Resultados</p>
+              <p className="hw-kicker">📈 Resultados</p>
               <h2 className="hw-title">La mejora se muestra con datos.</h2>
             </div>
             <p className="hw-lead">Cada estudiante comienza con un diagnóstico inicial que revela su punto de partida. Sobre esa base se traza un plan de acción personalizado y una curva de progreso que se renueva con un diagnóstico cada fin de mes. Los resultados no quedan en nuestras aulas: usted los verá reflejados en el rendimiento de su hijo en su colegio y en los exámenes de su institución.</p>
@@ -421,6 +404,11 @@ export default function Home() {
               <span>Años de ruta posible por estudiante: de fundamentos a preuniversitario.</span>
             </div>
           </div>
+
+          <div className="hw-proof-visual" data-reveal>
+            <img src={padresProgreso} alt="Padres de familia de Cerro de Pasco viendo el progreso semanal de su hijo en el celular" />
+            <p>Así de claro lo verás tú: el progreso de tu hijo, semana a semana, en tu propio celular. 📲</p>
+          </div>
         </div>
       </section>
 
@@ -428,7 +416,7 @@ export default function Home() {
         <div className="hw-shell">
           <div className="hw-section__head" data-reveal>
             <div>
-              <p className="hw-kicker">FAQ</p>
+              <p className="hw-kicker">💬 FAQ</p>
               <h2 className="hw-title">Lo que un padre necesita saber antes de escribir.</h2>
             </div>
           </div>
@@ -447,7 +435,7 @@ export default function Home() {
       <section id="contacto" className="hw-section">
         <div className="hw-shell hw-contact">
           <div className="hw-contact__panel" data-reveal>
-            <p className="hw-kicker" style={{ color: 'var(--sage)' }}>Admisión abierta</p>
+            <p className="hw-kicker" style={{ color: 'var(--sage)' }}>📲 Admisión abierta</p>
             <h2>Reserva el examen y recibe el diagnóstico inicial.</h2>
             <p>
               Escríbenos por WhatsApp o correo para reservar el examen de admisión de tu hijo o hija. Te respondemos en horario de atención.
