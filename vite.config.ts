@@ -5,7 +5,7 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/academia-alto-rendimiento-web/',
   plugins: [inspectAttr(), react()],
   server: {
     port: 3000,
